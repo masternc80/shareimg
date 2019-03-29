@@ -1,15 +1,15 @@
-spring 
-  application
+spring:
+  application:
     name: config-server
-  cloud
-    config
-      discovery
+  cloud:
+    config:
+      discovery:
         enabled: true
         serviceId: discovery-server
 
-eureka
-  client
-    serviceUrl
+eureka:
+  client:
+    serviceUrl:
       defaultZone: http://${spring.cloud.config.discovery.serviceId}.default:8900/eureka
   instance:
     metadataMap:
