@@ -1,4 +1,4 @@
-package com.shareimg.services.config;
+package com.shareimg.services;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -13,12 +13,15 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-public class ConfigServerConfig extends WebSecurityConfigurerAdapter {
+public class DiscoveryServerConfig extends WebSecurityConfigurerAdapter {
   
   @Override
   protected void configure(AuthenticationManagerBuilder auth) throws Exception {
     log.info("Initializing authentication provider...");
-    auth.inMemoryAuthentication().withUser("config-user").password("{noop}config-password").roles("USER");
+    auth.inMemoryAuthentication()
+      .withUser("discovery")
+      .password("{noop}Wuzr{ZJp4x}`svGU")
+      .roles("USER");
   }
 
   @Override
