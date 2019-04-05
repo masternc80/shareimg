@@ -1,11 +1,18 @@
+server:
+  port: 8888
 spring:
-  application:
-    name: config-server
+  profiles:
+    active: native
   cloud:
     config:
+      server:
+        native:
+          searchLocations: file:///var/lib/config-repo
       discovery:
         enabled: true
         serviceId: discovery-server
+  application:
+    name: config-server
 
 eureka:
   client:

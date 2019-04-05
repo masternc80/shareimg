@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: discovery-server
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: movies-service
+      labels:
+        app: discovery-server
+    spec:
+      containers:
+        name: discovery-server
+        image: 10.0.2.15:5000/discovery-server:latest
+        ports:
+          containerPort: 8900
+       imagePullPolicy: IfNotPresent
+  strategy:
+      rollingUpdate: # controls update strategy
+        maxSurge: 1
+        maxUnavailable: 1
+      type: RollingUpdate
