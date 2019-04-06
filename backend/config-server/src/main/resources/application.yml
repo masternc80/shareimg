@@ -22,3 +22,10 @@ eureka:
     metadataMap:
       user: discovery
       password: Wuzr{ZJp4x}`svGU
+
+logging:
+  level:
+    root: info
+    com.shareimg: debug
+    org.springframework: error
+  path: .
