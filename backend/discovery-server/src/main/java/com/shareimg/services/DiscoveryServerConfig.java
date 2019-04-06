@@ -20,7 +20,7 @@ public class DiscoveryServerConfig extends WebSecurityConfigurerAdapter {
     log.info("Initializing authentication provider...");
     auth.inMemoryAuthentication()
       .withUser("discovery")
-      .password("{noop}Wuzr{ZJp4x}`svGU")
+      .password("{noop}WuzrZJp4xsvGU")
       .roles("USER");
   }
 

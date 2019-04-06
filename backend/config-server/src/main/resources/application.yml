@@ -17,7 +17,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://discovery:Wuzr{ZJp4x}`svGU@${spring.cloud.config.discovery.serviceId}.default:8900/eureka
+      defaultZone: http://discovery:WuzrZJp4xsvGU@${spring.cloud.config.discovery.serviceId}.default:8900/eureka
 
 logging:
   level:
