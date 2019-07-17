@@ -13,7 +13,7 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
-    preferIpAddress: false
+    preferIpAddress: true
 
 logging:
   level:

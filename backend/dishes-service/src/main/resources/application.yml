@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: dishes-service
+  data:
+    mongodb:
+      database: dishes
+      host: localhost
+      port: 27017
+
+
+server:
+  port: 8080
